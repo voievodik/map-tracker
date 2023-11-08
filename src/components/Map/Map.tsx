@@ -6,12 +6,13 @@ import {
   Marker,
   Popup,
   useMapEvents,
+  Tooltip,
 } from 'react-leaflet';
-import { questQueue } from '../data-structure';
-import { LocationType } from '../type/LocationType';
-import { QuestResponseType } from '../type/QuestResponseType';
-import { QuestsType } from '../type/QuestsType';
-import { updateQuests, getQuests, initializeQuests } from '../api/quest';
+import { questQueue } from '../../data-structure';
+import { updateQuests, getQuests, initializeQuests } from '../../api/quest';
+import { LocationType } from '../../types/LocationType';
+import { QuestResponseType } from '../../types/QuestResponseType';
+import { QuestsType } from '../../types/QuestsType';
 
 export const Map = () => {
   const [location, setLocation] = useState<LocationType | null>(null);
@@ -35,10 +36,6 @@ export const Map = () => {
 
   useEffect(() => {
     initializeQuests();
-
-    return () => {
-      initializeQuests();
-    };
   }, []);
 
   useEffect(() => {
@@ -83,8 +80,15 @@ export const Map = () => {
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
       />
 
-      {visibleQuests.map(item => (
+      {visibleQuests.map((item, index) => (
         <Marker key={item.id} position={[item.location.lat, item.location.lng]}>
+          <Tooltip
+            direction="top"
+            offset={[-15, -15]}
+            permanent
+          >
+            {index + 1}
+          </Tooltip>
           <Popup>
             {item.timestamp}
           </Popup>

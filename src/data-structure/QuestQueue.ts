@@ -1,19 +1,5 @@
-/* eslint-disable no-console */
-/* eslint-disable max-classes-per-file */
-/* eslint-disable @typescript-eslint/no-unused-vars */
-class Quest {
-  location: { lat: number; lng: number };
-
-  timestamp: string;
-
-  next: Quest | null;
-
-  constructor(location: { lat: number; lng: number }, timestamp: string) {
-    this.location = location;
-    this.timestamp = timestamp;
-    this.next = null;
-  }
-}
+import { LocationType } from '../types/LocationType';
+import { Quest } from './Quest';
 
 export class QuestQueue {
   private first: Quest | null;
@@ -25,7 +11,7 @@ export class QuestQueue {
     this.last = null;
   }
 
-  enqueue(location: { lat: number; lng: number }, timestamp: string): void {
+  enqueue(location: LocationType, timestamp: string): void {
     const newQuest = new Quest(location, timestamp);
 
     if (this.last === null) {
@@ -52,5 +38,3 @@ export class QuestQueue {
     return removedQuest;
   }
 }
-
-export const questQueue = new QuestQueue();

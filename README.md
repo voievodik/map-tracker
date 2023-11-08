@@ -1,27 +1,31 @@
-# React + TypeScript + Vite
+<h1 align="center">Map tracker</h1>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+- [✨WEBSITE✨](https://map-tracker-app.netlify.app/)
 
-Currently, two official plugins are available:
+ <h2 align="center">📋About📋</h2>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This is a simple project that allows users to select geographic coordinates and track them. The application is developed using Vite.js and React technologies.
 
-## Expanding the ESLint configuration
+<h2 align="center">🧙‍♂️Technologies used🧙‍♂️</h2>
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+ - ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
+ - ![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)
+ - ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
+ - ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
+ - ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
+ - ![ESLint](https://img.shields.io/badge/ESLint-4B3263?style=for-the-badge&logo=eslint&logoColor=white)
+ - ![Vite](https://img.shields.io/badge/vite-%23646CFF.svg?style=for-the-badge&logo=vite&logoColor=white)
 
-- Configure the top-level `parserOptions` property like this:
+<h2 align="center">📌Instructions how to run application locally📌</h2>
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
+1. Clone repository to your local machine
+2. Open terminal in the project
+3. Set up project and install necessary packages:
+```bash
+npm install
 ```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+4. Run these commands in terminal:
+```bash
+npm run dev
+```
+5. Open application in your browser
